@@ -37,11 +37,51 @@ collections:
           - {label: Description, name: description, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+
+
+          - {label: "SubTitle", name: "subtitle", widget: "string"}
+          - {label: "FactTitle", name: "factTitle", widget: "string"}
+          - {label: "Fact", name: "fact", widget: "string"}
+          - {label: "Testimonials", name: "testimonials", widget: "object", fields: [{label: "Quote", name: "quote", widget: "string"}, {label: "Name", name: "name", widget: "string"}]}
+
+
+
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+          - {label: "Team Title", name: "teamTitle", widget: "string"}
+          - {label: "Team", name: team, widget: object, fields: [{label: Name, name: name, widget: string}, {label: Image, name: image, widget: image}, {label: Role, name: role, widget: string}]}
+          - {label: "Join Team Title", name: "joinTitle", widget: "string"}
+          - {label: "Join Description", name: "joinDes", widget: "string"}
+          - {label: "About Title", name: "aboutTitle", widget: "string"}
+          - {label: "About Description", name: "aboutDes", widget: "string"}
+
+
+      - file: "src/pages/faq/index.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/terms/index.md"
+        label: "Terms"
+        name: "terms"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "terms-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/privatepolicy/index.md"
+        label: "Private Policy"
+        name: "pp"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "private-policy-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"

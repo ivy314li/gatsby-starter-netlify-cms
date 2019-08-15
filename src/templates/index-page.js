@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+//import Styles from '../styles/global.css'
 
 export const IndexPageTemplate = ({
   image,
@@ -15,55 +16,77 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
+
+
   <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
+
+  <section className="section section--gradient" style = {{
+      backgroundColor: 'turquoise',
+  }}>
+    <div className="container" >
+
+      <div class="columns is-vcentered">
+
+      <div class="column is-half">
+        <div
+          style={{
+            display: 'flex',
+            height: '500px',
+            lineHeight: '1',
+            justifyContent: 'space-around',
+            alignItems: 'left',
+            flexDirection: 'column',
+          }}
+        >
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
             lineHeight: '1',
-            padding: '0.25em',
+            padding: '5% 5% 0%',
           }}
         >
-          {title}
+        {title}
         </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+
+      <h3
+        className="is-size-6-mobile is-size-5-tablet is-size-4-widescreen"
+        style={{
+          color: 'white',
+          lineHeight: '1.3',
+          padding: '2% 5% 5%',
+        }}
+      >
+      {subheading}
+      </h3>
+      <a href="https://www.w3docs.com/" class="button is-rounded is-large is-primary is-inverted is-outlined">Sign Up For Free</a>
+      <p className="is-size-8-mobile is-size-8-tablet is-size-8-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            lineHeight: '1.3',
+            padding: '1% 5% 5%',
           }}
-        >
-          {subheading}
-        </h3>
+      >
+        {subheading}
+      </p>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="column is-half">
+        <figure class="image is-2by3">
+          <img src="https://www.bankingtech.com/files/2017/03/Capital-One-Eno.png"></img>
+        </figure>
       </div>
     </div>
+    </div>
+
+  </section>
+
+
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
